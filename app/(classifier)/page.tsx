@@ -81,7 +81,7 @@ export default function Dashboard() {
               <span className="sr-only">Toggle notifications</span>
             </Button> */}
           </div>
-          <div className="flex-1">
+          <div className="flex flex-1">
             <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
               <Link
                 href="#"
@@ -141,7 +141,7 @@ export default function Dashboard() {
           </div> */}
         </div>
       </div>
-      <div className="flex flex-col">
+      <div className="flex w-full flex-col">
         <header className="flex h-14 items-center gap-4 border-b bg-muted/40 px-4 md:hidden lg:h-[60px] lg:px-6">
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
@@ -164,7 +164,7 @@ export default function Dashboard() {
                   <span className="sr-only">AI Classifier</span>
                 </Link>
                 <Link
-                  href="/dashboard"
+                  href="/"
                   onClick={() => setOpen(false)}
                   className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
                 >
@@ -233,14 +233,14 @@ export default function Dashboard() {
               </div>
             </form> */}
           </div>
-          <DropdownMenu>
-            {/* <DropdownMenuTrigger asChild>
+          {/* <DropdownMenu> */}
+          {/* <DropdownMenuTrigger asChild>
               <Button variant="secondary" size="icon" className="rounded-full">
                 <CircleUser className="h-5 w-5" />
                 <span className="sr-only">Toggle user menu</span>
               </Button>
             </DropdownMenuTrigger> */}
-            <DropdownMenuContent align="end">
+          {/* <DropdownMenuContent align="end">
               <DropdownMenuLabel>My Account</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem>Settings</DropdownMenuItem>
@@ -248,16 +248,16 @@ export default function Dashboard() {
               <DropdownMenuSeparator />
               <DropdownMenuItem>Logout</DropdownMenuItem>
             </DropdownMenuContent>
-          </DropdownMenu>
+          </DropdownMenu> */}
         </header>
-        <main className="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6">
+        <main className="flex w-full flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6">
           <div className="flex items-center">
             <h1 className="text-lg font-semibold md:text-2xl">Classifier</h1>
           </div>
-          <div className="flex rounded-lg">
-            <div className="relative flex flex-col items-start gap-0">
+          <div className="flex max-w-screen-2xl rounded-lg">
+            <div className="relative flex w-full flex-col items-start gap-0">
               <form className="grid w-full grid-cols-3 items-start gap-6">
-                <fieldset className="col-span-2 grid gap-6 rounded-lg border p-4">
+                <fieldset className="col-span-3 grid gap-6 rounded-lg border p-4">
                   <legend className="-ml-1 px-1 text-sm font-medium">
                     Settings
                   </legend>
@@ -295,7 +295,7 @@ export default function Dashboard() {
                     />
                   </div>
                 </fieldset>
-                <fieldset className="grid gap-6 rounded-lg border p-4">
+                <fieldset className="col-span-3 grid gap-6 rounded-lg border p-4">
                   <legend className="-ml-1 px-1 text-sm font-medium">
                     Prompt
                   </legend>
