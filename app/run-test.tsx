@@ -30,7 +30,8 @@ export function RunTest() {
           onChange={(e) => setSelectedModel(e.target.value)}
           className="rounded border px-2 py-1"
         >
-          <option value="gpt-4o-mini">OpenAI gpt-4o-mini</option>
+          <option value="openai">OpenAI gpt-4o-mini</option>
+          <option value="anthropic">Anthropic claude 3.5 sonnet</option>
           {/* Add more options for different models/providers */}
           {/* <option value="another-provider">Another AI Provider</option> */}
         </select>

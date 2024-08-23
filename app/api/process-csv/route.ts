@@ -1,7 +1,8 @@
-// app/api/process-csv/route.ts
-
 import fs from 'fs'
 import { NextResponse } from 'next/server'
+import { anthropic } from '@ai-sdk/anthropic'
+import { google } from '@ai-sdk/google'
+import { mistral } from '@ai-sdk/mistral'
 import { openai } from '@ai-sdk/openai'
 import { generateText } from 'ai'
 import csv from 'csv-parser'
@@ -17,7 +18,12 @@ let falseNegative = 0
 let falsePositiveText: string[] = []
 let falseNegativeText: string[] = []
 
-async function isEmergency(text: string, model: string): Promise<boolean> {
+async function isEmergency(
+  text: string,
+  model: string,
+  temperature?: number,
+  prompt?: string
+): Promise<boolean> {
   try {
     const prompt = text
       ? `Is this an emergency maintenance request: "${text}"? Respond with only "true" or "false".`
@@ -63,11 +69,32 @@ Response Guideline:
 
 Based on this context, you will analyze the maintenance request provided and determine if it's an emergency.
 You must respond with ONLY 'true' for emergency or 'false' for non-emergency, without any additional explanation.`
+
+    // Switch statement to select the appropriate model
+    let selectedModel
+    switch (model) {
+      case 'openai':
+        selectedModel = openai('gpt-4o-mini')
+        break
+      case 'anthropic':
+        selectedModel = anthropic('claude-3-5-sonnet-20240620')
+        break
+      case 'google':
+        selectedModel = google('models/gemini-1.5-pro-latest')
+        break
+      case 'mistral':
+        selectedModel = mistral('mistral-large-latest')
+        break
+      default:
+        selectedModel = openai('gpt-4o-mini') // Default to OpenAI if no valid model is provided
+    }
+
     const { text: responseText } = await generateText({
-      model: model === 'openai' ? openai('gpt-4o-mini') : openai('gpt-4o-mini'), // Replace with actual logic for other models
+      model: selectedModel,
       prompt: prompt,
-      temperature: 0.5,
+      temperature: temperature ? temperature : 0.5,
     })
+
     const result = responseText.trim().toLowerCase()
     return result === 'true'
   } catch (error) {
