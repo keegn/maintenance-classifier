@@ -344,7 +344,7 @@ export default function Dashboard() {
                       </CardHeader>
                       <CardContent className="grid gap-4">
                         <div className="grid auto-rows-min gap-2">
-                          <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none">
+                          <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none text-green-800">
                             {result ? (
                               result.truePositive
                             ) : (
@@ -356,7 +356,7 @@ export default function Dashboard() {
                           </div>
                         </div>
                         <div className="grid auto-rows-min gap-2">
-                          <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none">
+                          <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none text-rose-500">
                             {result ? (
                               result.falsePositive
                             ) : (
@@ -378,7 +378,7 @@ export default function Dashboard() {
                       </CardHeader>
                       <CardContent className="grid gap-4">
                         <div className="grid auto-rows-min gap-2">
-                          <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none">
+                          <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none text-green-800">
                             {result ? (
                               result.trueNegative
                             ) : (
@@ -390,7 +390,7 @@ export default function Dashboard() {
                           </div>
                         </div>
                         <div className="grid auto-rows-min gap-2">
-                          <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none">
+                          <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none text-rose-500">
                             {result ? (
                               result.falseNegative
                             ) : (
