@@ -1,7 +1,7 @@
 Emergency Requests,Non-Emergency Requests
-"Water heater burst, flooding the basement",Leaky faucet in the kitchen
-Gas leak detected in the kitchen,Toilet running continuously
-"No heat in the middle of winter, its 20F outside",Loose door handle in the bedroom
+Water heater burst flooding the basement,Leaky faucet in the kitchen
+Gas leak detected in the kitchen,Toilet running continuously but not causing flooding
+No heat in the middle of winter and its 20F outside,Loose door handle in the bedroom
 Broken lock on the front door,Minor ant problem in the kitchen
 Electrical outlet sparking and smoking,Burned out light bulb in hallway
 Fire in the kitchen,Garage door opener not working
@@ -9,7 +9,7 @@ Carbon monoxide detector going off,Small crack in living room window
 Burst pipe in the bathroom,Stuck window in the guest bedroom
 Tree fell on the roof causing damage,Dishwasher not draining properly
 Sewage backup in the basement,Loose cabinet door in the kitchen
-Complete power outage in the house,Minor draft from front door
+long power outage in just my apartment and its freezing outside,Minor draft from front door
 Water coming through the ceiling,Closet door off its track
 Broken window during a storm,Shower head dripping
 Fire alarm going off due to actual fire,Loose tiles in the bathroom
@@ -18,34 +18,36 @@ Stair railing broken and unsafe,Small stain on the carpet
 Major roof leak during heavy rain,Bathtub drain slow to empty
 Collapsed ceiling in the living room,Blinds not closing properly
 Burst pipe causing severe water damage,Screen door needs adjustment
-"Gas smell detected, possible leak",Loose baseboard in the living room
+Gas smell detected possible leak,Loose baseboard in the living room
 Toilet overflowing uncontrollably causing flooding,Squeaky floorboard in the bedroom
-Furnace making loud banging noises and smoking,Hot water isnt working
+Furnace making loud banging noises and smoking,No hot water
 Front door won't close due to swelling compromising security,Minor leak under kitchen sink
 Electrical fire in a circuit breaker,Toilet seat loose
-Basement flooding from outside water,Gutter overflowing during heavy rain
+Basement flooding from outside water,Gutter overflowing outside during heavy rain but not flooding
 Carbon monoxide leak in the garage,Loose doorknob on the closet
-"Bathtub faucet won't shut off, causing flooding",Minor dent in the fridge door
+Bathtub faucet won't shut off causing flooding,Minor dent in the fridge door
 Air conditioning failed during heatwave,Washing machine noisy but working
 Strong gas smell in the house,Small hole in window screen
 Tree branch through window during storm,Creaky hinges on the front door
 Dangerous ice overhanging the door,Loose towel rack in the bathroom
 Frozen pipes about to burst,Dryer takes too long to dry clothes
-Broken glass in front of the property from cars getting broken into,Minor scuff marks on the walls
+Apartment is flooding,Minor scuff marks on the walls
 Chimney collapse during storm,Weeds growing in the driveway
 No electricity to critical medical equipment,Slow draining sink in bathroom
 Major plumbing leak causing water damage,Loose curtain rod in living room
-Breaker panel sparking,Small chip in bathroom mirror
+Breaker panel sparkling,Small chip in bathroom mirror
 Roof collapse from heavy snow,Shower water pressure low
 Front door won't lock and I need it to for security,Minor grout cracking in the shower
-Wall collapsed due to water damage,Microwave not working properly
+Apartment is flooding,Microwave not working properly
 Smoke detector continuously alarming,Window blinds slightly uneven
-Balcony railing loose and unsafe,Loose toilet paper holder
-Ceiling fan fell and damaged floor,Stuck door in the guest bathroom
+Balcony railing loose and I fell off the second story,Loose toilet paper holder
+Apartment is flooding,Stuck door in the guest bathroom
 Hot water pipe burst in the wall,Loose light fixture in the hallway
-"Main door jammed, can't exit house",Water filter needs replacing
+Main door jammed can't exit house,Water filter needs replacing
 Tree uprooted and leaning on the house,Minor rust on bathroom fixtures
 Dangerous ice buildup on driveway,Crack in the driveway pavement
 Toilet is flooding my bathroom,Loose outlet cover in the living room
-Large crack in foundation wall that is making noise indicating it could crumble,Small paint chip on the front door
-Water is leaking into my apartment from the floor above,Loose faucet handle in the bathroom
+My wall cracked and my apartment is exposed to the outside now,Small paint chip on the front door
+Water is leaking into my apartment from the floor above,Loose faucet handle in the bathroom causing flooding
+Apartment is flooding,smoke detector chirping
+Apartment is flooding,power outage from storm
