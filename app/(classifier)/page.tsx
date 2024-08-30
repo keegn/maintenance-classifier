@@ -344,7 +344,7 @@ export default function Dashboard() {
                       </CardHeader>
                       <CardContent className="grid gap-4">
                         <div className="grid auto-rows-min gap-2">
-                          <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none text-green-800">
+                          <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none">
                             {result ? (
                               result.truePositive
                             ) : (
@@ -378,7 +378,7 @@ export default function Dashboard() {
                       </CardHeader>
                       <CardContent className="grid gap-4">
                         <div className="grid auto-rows-min gap-2">
-                          <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none text-green-800">
+                          <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none">
                             {result ? (
                               result.trueNegative
                             ) : (
@@ -417,7 +417,7 @@ export default function Dashboard() {
                               <Skeleton className="h-[26px] w-[40px]" />
                             )}
                             <span className="text-sm font-normal text-muted-foreground">
-                              Total Emergencies
+                              Emergencies
                             </span>
                           </div>
                         </div>
@@ -429,7 +429,7 @@ export default function Dashboard() {
                               <Skeleton className="h-[26px] w-[40px]" />
                             )}
                             <span className="text-sm font-normal text-muted-foreground">
-                              Total Non-Emergencies
+                              Non-Emergencies
                             </span>
                           </div>
                         </div>
@@ -459,47 +459,51 @@ export default function Dashboard() {
                     <Skeleton className="mt-4 h-4 w-3/4" />
                   </div>
                 ) : result ? (
-                  <Card className="mt-8">
+                  <>
                     {result.falsePositiveText.length > 0 && (
-                      <Table>
-                        <TableHeader>
-                          <TableRow>
-                            <TableHead className="w-[100px]">
-                              False Positive (model thinks they should be
-                              classified as Non-emergencies)
-                            </TableHead>
-                          </TableRow>
-                        </TableHeader>
-                        <TableBody>
-                          {result?.falsePositiveText.map((text: string) => (
-                            <TableRow key={text}>
-                              <TableCell>{text}</TableCell>
+                      <Card className="mt-8">
+                        <Table>
+                          <TableHeader className="bg-neutral-100">
+                            <TableRow>
+                              <TableHead className="w-[100px]">
+                                False Positive (model thinks they should be
+                                classified as Non-emergencies)
+                              </TableHead>
                             </TableRow>
-                          ))}
-                        </TableBody>
-                      </Table>
+                          </TableHeader>
+                          <TableBody>
+                            {result?.falsePositiveText.map((text: string) => (
+                              <TableRow key={text}>
+                                <TableCell>{text}</TableCell>
+                              </TableRow>
+                            ))}
+                          </TableBody>
+                        </Table>
+                      </Card>
                     )}
 
                     {result.falseNegativeText.length > 0 && (
-                      <Table className="mt-8">
-                        <TableHeader>
-                          <TableRow>
-                            <TableHead className="w-[100px]">
-                              False Negative (model thinks they should be
-                              classified as emergencies)
-                            </TableHead>
-                          </TableRow>
-                        </TableHeader>
-                        <TableBody>
-                          {result?.falseNegativeText.map((text: string) => (
-                            <TableRow key={text}>
-                              <TableCell>{text}</TableCell>
+                      <Card className="mt-8">
+                        <Table>
+                          <TableHeader className="bg-neutral-100">
+                            <TableRow>
+                              <TableHead className="w-[100px]">
+                                False Negative (model thinks they should be
+                                classified as emergencies)
+                              </TableHead>
                             </TableRow>
-                          ))}
-                        </TableBody>
-                      </Table>
+                          </TableHeader>
+                          <TableBody>
+                            {result?.falseNegativeText.map((text: string) => (
+                              <TableRow key={text}>
+                                <TableCell>{text}</TableCell>
+                              </TableRow>
+                            ))}
+                          </TableBody>
+                        </Table>
+                      </Card>
                     )}
-                  </Card>
+                  </>
                 ) : null}
               </div>
             </div>
