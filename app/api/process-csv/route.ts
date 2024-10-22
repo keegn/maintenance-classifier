@@ -7,8 +7,6 @@ import { openai } from '@ai-sdk/openai'
 import { generateText } from 'ai'
 import csv from 'csv-parser'
 
-// Import other model providers similarly if needed
-
 let emergencyCount = 0
 let nonEmergencyCount = 0
 let truePositive = 0
@@ -108,7 +106,7 @@ async function isEmergency(
 async function processCsv(model: string, temperature: number) {
   const rows: any[] = []
   return new Promise<void>((resolve, reject) => {
-    const filePath = 'app/api/process-csv/maintenance_requests.csv'
+    const filePath = 'app/api/process-csv/generated_maintenance_requests.csv'
     fs.createReadStream(filePath)
       .pipe(csv())
       .on('data', (row) => {
