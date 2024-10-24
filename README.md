@@ -1,6 +1,6 @@
 # Maintenance Classifier App
 
-This is a Next.js application designed to evaluate the performance of various AI models in classifying maintenance requests as emergencies or non-emergencies. The app uses pre-classified data from a CSV file to test models like OpenAI, Anthropic, Google, and Mistral.
+This is a Next.js application designed to evaluate the performance of various AI models in classifying maintenance requests as emergencies or non-emergencies. The app uses pre-classified data from a CSV file to test models like OpenAI, Anthropic, Google, and Mistral. Please note that we only support OpenAI and Anthropic for now, but see the api route for what will be supported in the future. UI design is based on the [shadcn/ui](https://ui.shadcn.com/) library, but we have not spent the time to make it look nice as the focus is on the functionality.
 
 ## Purpose
 
