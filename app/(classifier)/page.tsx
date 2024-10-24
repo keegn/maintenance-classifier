@@ -36,6 +36,7 @@ import { Textarea } from '@/components/ui/textarea'
 export default function Dashboard() {
   const [result, setResult] = useState<any>(null)
   const [loading, setLoading] = useState(false)
+  // Please note we only support openai and anthropic for now, but see the api route for what will be supported in the future.
   const [selectedModel, setSelectedModel] = useState('openai')
   const [temperature, setTemperature] = useState(0.5)
   const [prompt, setPrompt] = useState('')
@@ -165,7 +166,7 @@ export default function Dashboard() {
                     <Label htmlFor="content">Prompt</Label>
                     <Textarea
                       id="content"
-                      placeholder="Default prompt is in the api route"
+                      placeholder="The prompt is used to classify the data. It is passed to the model as a prompt. The default prompt is in the api route, but you can override it here."
                       value={prompt}
                       className="min-h-[9.5rem]"
                       onChange={(e) => setPrompt(e.target.value)}
@@ -215,7 +216,7 @@ export default function Dashboard() {
                       </CardHeader>
                       <CardContent className="grid gap-4">
                         <div className="grid auto-rows-min gap-2">
-                          <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none">
+                          <div className="flex items-center gap-1 text-2xl font-bold tabular-nums leading-none">
                             {result ? (
                               result.truePositive
                             ) : (
@@ -227,7 +228,7 @@ export default function Dashboard() {
                           </div>
                         </div>
                         <div className="grid auto-rows-min gap-2">
-                          <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none text-rose-500">
+                          <div className="flex items-center gap-1 text-2xl font-bold tabular-nums leading-none text-rose-500">
                             {result ? (
                               result.falsePositive
                             ) : (
@@ -249,7 +250,7 @@ export default function Dashboard() {
                       </CardHeader>
                       <CardContent className="grid gap-4">
                         <div className="grid auto-rows-min gap-2">
-                          <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none">
+                          <div className="flex items-center gap-1 text-2xl font-bold tabular-nums leading-none">
                             {result ? (
                               result.trueNegative
                             ) : (
@@ -261,7 +262,7 @@ export default function Dashboard() {
                           </div>
                         </div>
                         <div className="grid auto-rows-min gap-2">
-                          <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none text-rose-500">
+                          <div className="flex items-center gap-1 text-2xl font-bold tabular-nums leading-none text-rose-500">
                             {result ? (
                               result.falseNegative
                             ) : (
@@ -281,7 +282,7 @@ export default function Dashboard() {
                       </CardHeader>
                       <CardContent className="grid gap-4">
                         <div className="grid auto-rows-min gap-2">
-                          <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none">
+                          <div className="flex items-center gap-1 text-2xl font-bold tabular-nums leading-none">
                             {result ? (
                               result.emergencyCount
                             ) : (
@@ -293,7 +294,7 @@ export default function Dashboard() {
                           </div>
                         </div>
                         <div className="grid auto-rows-min gap-2">
-                          <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none">
+                          <div className="flex items-center gap-1 text-2xl font-bold tabular-nums leading-none">
                             {result ? (
                               result.nonEmergencyCount
                             ) : (
@@ -305,7 +306,7 @@ export default function Dashboard() {
                           </div>
                         </div>
                         <div className="grid auto-rows-min gap-2">
-                          <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none">
+                          <div className="flex items-center gap-1 text-2xl font-bold tabular-nums leading-none">
                             {result ? (
                               `${result.accuracy}%`
                             ) : (
