@@ -2,6 +2,8 @@
 
 This is a Next.js application designed to evaluate the performance of various AI models in classifying maintenance requests as emergencies or non-emergencies. The app uses pre-classified data from a CSV file to test models like OpenAI, Anthropic, Google, and Mistral. Please note that we only support OpenAI and Anthropic for now, but see the api route for what will be supported in the future. UI design is based on the [shadcn/ui](https://ui.shadcn.com/) library, but we have not spent the time to make it look nice as the focus is on the functionality.
 
+Note: This is a work in progress and the api and UI are subject to change.
+
 ## Purpose
 
 The primary goal of this app is to assess the accuracy of AI models in identifying emergency maintenance requests. The data used for testing is pre-classified, meaning each request is already labeled as either an emergency or non-emergency in the CSV file. This classification serves as the "ground truth" for evaluating the models.
