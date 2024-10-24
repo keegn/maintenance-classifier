@@ -1,6 +1,6 @@
 # Maintenance Classifier App
 
-This is a Next.js application designed to evaluate the performance of various AI models in classifying maintenance requests as emergencies or non-emergencies. The app uses pre-classified data from a CSV file to test models like OpenAI, Anthropic, Google, and Mistral. Please note that we only support OpenAI and Anthropic for now, but see the api route for what will be supported in the future. UI design is based on the [shadcn/ui](https://ui.shadcn.com/) library, but we have not spent the time to make it look nice as the focus is on the functionality. It uses Vercel's [AI SDK](https://sdk.vercel.ai/) for standardizing integration with AI models across different providers.
+This is a Next.js application designed to evaluate the performance of various AI models in classifying multifamily maintenance requests as emergencies or non-emergencies. The app uses pre-classified data from a CSV file to test models like OpenAI, Anthropic, Google, and Mistral. Please note that we only support OpenAI and Anthropic for now, but see the api route for what will be supported in the future. UI design is based on the [shadcn/ui](https://ui.shadcn.com/) library, but we have not spent the time to make it look nice as the focus is on the functionality. It uses Vercel's [AI SDK](https://sdk.vercel.ai/) for standardizing integration with AI models across different providers.
 
 Note: This is a work in progress and the api and UI are subject to change.
 
@@ -33,7 +33,7 @@ To run this project locally, follow these steps:
 
 3. **Set up environment variables**:
 
-   Create a `.env` file in the root directory and add your API keys for each model:
+   Create a `.env` file in the root directory and add your API keys for each model you want to test, using the format below:
 
    ```plaintext
    OPENAI_API_KEY=your_openai_api_key
