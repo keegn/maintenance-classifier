@@ -1,5 +1,6 @@
 'use client'
 
+// This File is for reference only. It is not used in the app.
 import { useState } from 'react'
 
 export function RunStreamTest() {
